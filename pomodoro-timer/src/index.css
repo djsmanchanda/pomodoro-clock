@@ -23,3 +23,37 @@ code {
   margin-top: 20px; /* Adds some space at the top if needed */
   /* Additional styling as needed */
 }
+/* App.css */
+body {
+  background-image: url('../public/images/wallpaper.jpg');
+  background-repeat: repeat;
+  background-size: auto; /* or cover/contain based on your preference */
+}
+@keyframes scroll {
+  from {
+    background-position: 0 0; /* Start position */
+  }
+  to {
+    background-position: 0 100%; /* End position (fully scrolled) */
+  }
+}
+
+body {
+  animation: scroll 60s linear infinite; /* Adjust duration and timing function as needed */
+}
+/* Apply translucent effect and border around all text */
+body {
+  text-shadow: 
+    -1px -1px 0 #ffffff,  
+     1px -1px 0 #ffffff,
+    -1px  1px 0 #ffffff,
+     1px  1px 0 #ffffff ; /* Border effect using text-shadow */
+}
+
+/* Example styles for specific elements */
+h1, h2, p {
+  opacity: 0.75; /* Adjust the opacity value as needed */
+}
+h3{
+  opacity: 0.25; /* Adjust the opacity value as needed */
+}

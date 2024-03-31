@@ -31,7 +31,7 @@ const Settings = ({ onSettingsChange }) => {
             id="work-duration"
             type="range"
             min="5"
-            max="15"
+            max="20"
             value={workDuration}
             onChange={handleWorkDurationChange}
             className={styles.slider}

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import LoopingText from './components/LoopingText';
 import Settings from './components/Settings';
 import Timer from './components/Timer';
+ 
 
 function App() {
   // State for work and break durations
@@ -19,7 +21,7 @@ function App() {
       <Settings onSettingsChange={onSettingsChange} />
       <Timer workDuration={workDuration} breakDuration={breakDuration} />
       
-      <h2>..inserting AI task here..</h2>
+      <LoopingText text="inserting AI task here...." />
 
     </div>
   );

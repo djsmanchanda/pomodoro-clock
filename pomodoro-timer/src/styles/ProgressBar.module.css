@@ -5,12 +5,16 @@
     border-radius: 20px; /* Pill shape */
     box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3), inset 0 -2px 6px rgba(0, 0, 0, 0.4); /* Inner shadow for 3D effect */
     overflow: hidden; /* Ensure the inner .progressBar respects the border-radius */
+    opacity: 0.95;
+
 }
 
 .progressBar {
     height: 20px;
-    background-color: green;
+    background-color: #4CAF50;
     border-radius: 20px; /* Pill shape */
+    box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3), inset 0 -2px 6px rgba(0, 0, 0, 0.5); /* Inner shadow for 3D effect */
+
     transition: width 0.5s ease-out;
     /* No need to set width here; it's controlled via inline styles */
 }
