@@ -1,35 +1,46 @@
 import React, { useState } from 'react';
-import styles from '../styles/Settings.module.css'; // Make sure to create and import your CSS module for styling
+import styles from '../styles/Settings.module.css'; // Ensure CSS module is imported correctly
 
 const Settings = ({ onSettingsChange }) => {
-  const [workDuration, setWorkDuration] = useState(25);
+  // State hooks for work and break durations
+  const [workDuration, setWorkDuration] = useState(10);
   const [breakDuration, setBreakDuration] = useState(5);
 
-  const handleWorkDurationChange = (e) => setWorkDuration(e.target.value);
-  const handleBreakDurationChange = (e) => setBreakDuration(e.target.value);
+  // Handlers for changing work and break durations
+  // Convert event value to number to ensure correct data type is maintained
+  const handleWorkDurationChange = (e) => setWorkDuration(Number(e.target.value));
+  const handleBreakDurationChange = (e) => setBreakDuration(Number(e.target.value));
 
+  // Submit handler for saving settings
   const handleSubmit = (e) => {
-    e.preventDefault();
-    onSettingsChange({ workDuration, breakDuration });
+    e.preventDefault(); // Prevent default form submission behavior
+    // Pass the updated settings back to the parent component
+    // Ensure the values are passed as numbers for proper handling
+    onSettingsChange({
+      workDuration: Number(workDuration),
+      breakDuration: Number(breakDuration)
+    });
   };
 
   return (
     <div className={styles.settings}>
       <form onSubmit={handleSubmit}>
         <div className={styles.settingItem}>
-          <label>Work Duration (minutes): {workDuration}</label>
+          <label htmlFor="work-duration">Work Duration (minutes): {workDuration}</label>
           <input
+            id="work-duration"
             type="range"
-            min="15"
-            max="30"
+            min="5"
+            max="15"
             value={workDuration}
             onChange={handleWorkDurationChange}
             className={styles.slider}
           />
         </div>
         <div className={styles.settingItem}>
-          <label>Break Duration (minutes): {breakDuration}</label>
+          <label htmlFor="break-duration">Break Duration (minutes): {breakDuration}</label>
           <input
+            id="break-duration"
             type="range"
             min="1"
             max="15"

@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.App {
+  text-align: center; /* Centers the content inside the .App div */
+  /* Other styles for .App */
+}
+
+.App h1 {
+  font-size: 3rem; /* Adjusts the font size to be larger */
+  /* You can also adjust the font-weight for bolder text */
+  font-weight: bold;
+  margin-top: 20px; /* Adds some space at the top if needed */
+  /* Additional styling as needed */
+}

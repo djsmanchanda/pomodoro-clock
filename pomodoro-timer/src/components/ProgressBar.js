@@ -1,17 +1,16 @@
+// ProgressBar.js
 import React from 'react';
+import styles from '../styles/ProgressBar.module.css';
 
-const ProgressBar = ({ progress }) => {
-  const progressBarStyle = {
-    width: `${progress}%`,
-    height: '20px',
-    backgroundColor: 'green',
-  };
+const ProgressBar = ({ currentTime, totalDuration }) => {
+    // Calculate progress as a percentage
+    const progress = ((totalDuration - currentTime) / totalDuration) * 100;
 
-  return (
-    <div style={{ width: '100%', backgroundColor: '#ddd' }}>
-      <div style={progressBarStyle}></div>
-    </div>
-  );
+    return (
+        <div className={styles.progressBarContainer}>
+            <div className={styles.progressBar} style={{ width: `${progress}%` }}></div>
+        </div>
+    );
 };
 
 export default ProgressBar;
