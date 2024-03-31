@@ -1,0 +1,39 @@
+/* Timer.module.css */
+.timer {
+    background-color: #fff; /* Pure white background */
+    border: 2px solid #f0f0f0; /* Light gray border */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .timer h2 {
+    font-size: 48px;
+    color: #333; /* Dark gray for text, ensuring good readability */
+    margin-bottom: 15px;
+  }
+  
+  .button {
+    background-color: #f8f8f8; /* Very light gray for buttons */
+    color: #333; /* Dark gray for button text */
+    border: 1px solid #e0e0e0; /* Slightly darker border for definition */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  .button:hover {
+    background-color: #e0e0e0; /* Slightly darker on hover */
+  }
+  
+  .button.start {
+    color: #4CAF50; /* Green text for start, adding a touch of color for semantics */
+  }
+  
+  .button.stop {
+    color: #f44336; /* Red text for stop, using color to convey meaning */
+  }
+  
